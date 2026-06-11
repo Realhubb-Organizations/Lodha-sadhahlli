@@ -421,6 +421,13 @@
             animation: eoi-zoom 2s ease-in-out infinite;
             display: inline-block;
         }
+
+        /* Launch banner sizing and inner scroll area */
+        .launch-banner { width: 440px; height: calc(100vh - 64px); }
+        .launch-banner .content { max-height: calc(100vh - 128px); overflow-y: auto; padding-right: 8px; }
+        .launch-banner .content::-webkit-scrollbar { width: 6px; }
+        .launch-banner .content::-webkit-scrollbar-track { background: transparent; }
+        .launch-banner .content::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 4px; }
     </style>
 </head>
 
@@ -547,50 +554,35 @@
                     <div class="hero-slide"><img src="image5.png" alt="Lodha Sadahalli"
                             title="Lodha Sadahalli – 3, 3.5 & 4 BHK Ultra-Luxury Homes"></div>
 
-                    <!-- Floating Info Card (top-left) -->
-                    <div class="absolute top-8 left-6 z-10 w-72 bg-white shadow-2xl overflow-hidden rounded-xl">
-                        <div
-                            class="bg-[#7B6B1A] text-white text-center py-2.5 text-sm font-bold tracking-widest uppercase">
-                            New Launch
+                    <!-- Floating Launch Banner (top-left) -->
+                    <div class="absolute top-8 left-6 z-10 launch-banner overflow-hidden rounded-xl shadow-2xl">
+                        <div class="rounded-t-xl bg-black text-white px-4 py-3 text-sm font-semibold">Pre-Launch: Register Your Interest</div>
+
+                        <div class="bg-white px-5 pt-5 pb-4 content">
+                            <h2 class="font-serif text-2xl text-gray-900 font-extrabold">Lodha Sadahalli</h2>
+                            <p class="text-gray-500 text-xs mt-1">Sadahalli, Devanahalli, North Bengaluru <span class="font-semibold">By Lodha Group</span></p>
+
+                            <div class="mt-4 rounded-lg bg-[#F0EDE6] p-3 text-[12px] text-gray-700">
+                                <div class="flex justify-between mb-2"><span class="text-gray-500">EOI Amount</span><span class="font-bold">₹7.20 Lacs*</span></div>
+                                <div class="flex justify-between mb-2"><span class="text-gray-500">Land Parcel</span><span class="font-bold">Approx 70 Acres</span></div>
+                                <div class="flex justify-between mb-2"><span class="text-gray-500">Structure</span><span class="font-bold">Multiple Towers</span></div>
+                                <div class="flex justify-between mb-2"><span class="text-gray-500">Residences</span><span class="font-bold">Coming Soon</span></div>
+                                <div class="flex justify-between mb-2"><span class="text-gray-500">Possession</span><span class="font-bold">To Be Announced</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500">RERA</span><span class="font-bold">2100047656 (Coming Soon)</span></div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-black text-white rounded-lg border-4 border-dashed border-yellow-400">
+                                <p class="text-sm font-semibold">3 BHK: 1,550–1,650 sq.ft<br>4 BHK: 2,550–2,650 sq.ft<br class="hidden sm:block">Price: ₹3.10 – 5.12 Cr*</p>
+                            </div>
+
+                            <div class="mt-4 text-center">
+                                <p class="text-sm text-gray-500">Ultra-Luxury <span class="font-semibold">3, 3.5 &amp; 4 BHK</span> Residences Start At</p>
+                                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900">₹3.10 Cr <span class="text-sm text-gray-500 font-medium">Onwards*</span></p>
+                            </div>
                         </div>
-                        <div class="px-5 pt-4 pb-3">
-                            <h1 class="font-bold text-xl text-gray-900 tracking-widest">LODHA SADAHALLI</h1>
-                            <p class="text-gray-500 text-xs mt-1">By Lodha Group</p>
-                            <p class="text-gray-500 text-xs font-medium">Sadahalli, Devanahalli, North Bengaluru</p>
-                            <dl class="mt-3.5 grid grid-cols-[100px_1fr] gap-y-1.5 rounded-lg bg-gray-50 p-3.5 text-[11px] text-left">
-                                <dt class="text-gray-500 font-medium">Land Parcel</dt>
-                                <dd class="font-bold text-gray-900">70 Acres</dd>
-                                <dt class="text-gray-500 font-medium">Grand Clubhouse</dt>
-                                <dd class="font-bold text-gray-900">2 Acres</dd>
-                                <dt class="text-gray-500 font-medium">Natural Lake</dt>
-                                <dd class="font-bold text-gray-900">18 Acres</dd>
-                                <dt class="text-gray-500 font-medium">Towers &amp; Units</dt>
-                                <dd class="font-bold text-gray-900">Coming Soon</dd>
-                                <dt class="text-gray-500 font-medium">Open Spaces</dt>
-                                <dd class="font-bold text-gray-900">80% Greenery</dd>
-                            </dl>
-                        </div>
-                        <div class="bg-[#7B6B1A] text-white text-center py-2.5 text-sm font-semibold">
-                            <span class="eoi-pulse">♦ EOI Starts ₹7.20 Lacs*</span>
-                        </div>
-                        <div class="h-[6px]"
-                            style="background: repeating-linear-gradient(90deg, #D4AF37 0px, #D4AF37 10px, #6B5C12 10px, #6B5C12 20px)">
-                        </div>
-                        <div class="bg-[#6B5C12] text-[#F0D574] text-center py-2.5 text-sm font-semibold">
-                            ♦ Avail Exclusive Launch Prices!
-                        </div>
-                        <div class="px-5 pt-4 pb-5">
-                            <p class="font-bold text-gray-800 text-sm">Ultra-Luxury 3, 3.5 &amp; 4 BHK</p>
-                            <p class="mt-1">
-                                <span class="text-[#D4AF37] font-semibold">₹ </span><span
-                                    class="text-3xl font-extrabold text-[#D4AF37]">3.1 Cr*</span><span
-                                    class="text-sm text-gray-500"> Onwards</span>
-                            </p>
-                            <button
-                                onclick="openModal(‘Express Interest’, ‘Get the best pre-launch pricing for Lodha Sadahalli.’, ‘Submit Interest’)"
-                                class="w-full bg-[#7B6B1A] hover:bg-[#6B5C12] text-white py-3 mt-4 font-bold text-sm tracking-wide transition-colors">
-                                Express Your Interest
-                            </button>
+
+                        <div class="bg-black text-white text-center py-3 font-semibold rounded-b-xl">
+                            <button onclick="openModal('Download Brochure', 'Please enter details to download brochure.', 'Download')" class="w-full">Download Brochure</button>
                         </div>
                     </div>
 

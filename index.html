@@ -421,6 +421,13 @@
             animation: eoi-zoom 2s ease-in-out infinite;
             display: inline-block;
         }
+
+        /* Launch banner sizing and inner scroll area */
+        .launch-banner { width: 440px; height: calc(100vh - 64px); }
+        .launch-banner .content { max-height: calc(100vh - 128px); overflow-y: auto; padding-right: 8px; }
+        .launch-banner .content::-webkit-scrollbar { width: 6px; }
+        .launch-banner .content::-webkit-scrollbar-track { background: transparent; }
+        .launch-banner .content::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 4px; }
     </style>
 </head>
 
@@ -547,52 +554,69 @@
                     <div class="hero-slide"><img src="image5.png" alt="Lodha Sadahalli"
                             title="Lodha Sadahalli – 3, 3.5 & 4 BHK Ultra-Luxury Homes"></div>
 
-                    <!-- Floating Info Card (top-left) -->
-                    <div class="absolute top-8 left-6 z-10 w-72 bg-white shadow-2xl overflow-hidden rounded-xl">
-                        <div
-                            class="bg-[#7B6B1A] text-white text-center py-2.5 text-sm font-bold tracking-widest uppercase">
-                            New Launch
-                        </div>
-                        <div class="px-5 pt-4 pb-3">
-                            <h1 class="font-bold text-xl text-gray-900 tracking-widest">LODHA SADAHALLI</h1>
-                            <p class="text-gray-500 text-xs mt-1">By Lodha Group</p>
-                            <p class="text-gray-500 text-xs font-medium">Sadahalli, Devanahalli, North Bengaluru</p>
-                            <dl class="mt-3.5 grid grid-cols-[100px_1fr] gap-y-1.5 rounded-lg bg-gray-50 p-3.5 text-[11px] text-left">
-                                <dt class="text-gray-500 font-medium">Land Parcel</dt>
-                                <dd class="font-bold text-gray-900">70 Acres</dd>
-                                <dt class="text-gray-500 font-medium">Grand Clubhouse</dt>
-                                <dd class="font-bold text-gray-900">2 Acres</dd>
-                                <dt class="text-gray-500 font-medium">Natural Lake</dt>
-                                <dd class="font-bold text-gray-900">18 Acres</dd>
-                                <dt class="text-gray-500 font-medium">Towers &amp; Units</dt>
-                                <dd class="font-bold text-gray-900">Coming Soon</dd>
-                                <dt class="text-gray-500 font-medium">Open Spaces</dt>
-                                <dd class="font-bold text-gray-900">80% Greenery</dd>
-                            </dl>
-                        </div>
-                        <div class="bg-[#7B6B1A] text-white text-center py-2.5 text-sm font-semibold">
-                            <span class="eoi-pulse">♦ EOI Starts ₹7.20 Lacs*</span>
-                        </div>
-                        <div class="h-[6px]"
-                            style="background: repeating-linear-gradient(90deg, #D4AF37 0px, #D4AF37 10px, #6B5C12 10px, #6B5C12 20px)">
-                        </div>
-                        <div class="bg-[#6B5C12] text-[#F0D574] text-center py-2.5 text-sm font-semibold">
-                            ♦ Avail Exclusive Launch Prices!
-                        </div>
-                        <div class="px-5 pt-4 pb-5">
-                            <p class="font-bold text-gray-800 text-sm">Ultra-Luxury 3, 3.5 &amp; 4 BHK</p>
-                            <p class="mt-1">
-                                <span class="text-[#D4AF37] font-semibold">₹ </span><span
-                                    class="text-3xl font-extrabold text-[#D4AF37]">3.1 Cr*</span><span
-                                    class="text-sm text-gray-500"> Onwards</span>
-                            </p>
-                            <button
-                                onclick="openModal(‘Express Interest’, ‘Get the best pre-launch pricing for Lodha Sadahalli.’, ‘Submit Interest’)"
-                                class="w-full bg-[#7B6B1A] hover:bg-[#6B5C12] text-white py-3 mt-4 font-bold text-sm tracking-wide transition-colors">
-                                Express Your Interest
-                            </button>
-                        </div>
+                      <!-- Floating Info Card (top-left) -->
+            <div class="absolute top-4 sm:top-8 left-6 right-6 sm:right-auto z-20 sm:w-96 bg-white shadow-2xl overflow-hidden rounded-xl max-h-[calc(100%-2rem)] sm:max-h-[calc(100%-4rem)] overflow-y-auto">
+                <!-- Top Bar -->
+                <div class="bg-luxury-dark text-white py-2.5 px-4 sm:px-5">
+                    <span class="font-bold text-xs sm:text-sm">Pre-Launch: Register Your Interest</span>
+                </div>
+
+                <!-- Title & Location -->
+                <div class="px-4 sm:px-5 pt-3 sm:pt-5 pb-2 sm:pb-4">
+                    <h1 class="font-extrabold text-xl sm:text-3xl text-gray-900 leading-tight">Lodha Sadahalli</h1>
+                    <p class="text-gray-500 text-xs sm:text-sm mt-1 sm:mt-2">Sadahalli, Devanahalli, North Bengaluru <span class="font-bold text-gray-800">By Lodha Group</span></p>
+                </div>
+
+                <!-- Project Info Table -->
+                <div class="mx-4 sm:mx-5 mb-3 sm:mb-4 bg-luxury-darker rounded-xl p-3 sm:p-4 space-y-1.5 sm:space-y-2.5">
+                    <div class="flex justify-between items-start gap-3">
+                        <span class="text-gray-500 text-xs sm:text-sm">EOI Amount</span>
+                        <span class="font-bold text-gray-900 text-xs sm:text-sm text-right">₹7.20 Lacs*</span>
                     </div>
+                    <div class="flex justify-between items-start gap-3">
+                        <span class="text-gray-500 text-xs sm:text-sm">Land Parcel</span>
+                        <span class="font-bold text-gray-900 text-xs sm:text-sm text-right">Approx 70 Acres</span>
+                    </div>
+                    <div class="flex justify-between items-start gap-3">
+                        <span class="text-gray-500 text-xs sm:text-sm">Structure</span>
+                        <span class="font-bold text-gray-900 text-xs sm:text-sm text-right">Multiple Towers</span>
+                    </div>
+                    <div class="flex justify-between items-start gap-3">
+                        <span class="text-gray-500 text-xs sm:text-sm">Residences</span>
+                        <span class="font-bold text-gray-900 text-xs sm:text-sm text-right">Coming Soon</span>
+                    </div>
+                    <div class="flex justify-between items-start gap-3">
+                        <span class="text-gray-500 text-xs sm:text-sm">Possession</span>
+                        <span class="font-bold text-gray-900 text-xs sm:text-sm text-right">To Be Announced</span>
+                    </div>
+                    <div class="flex justify-between items-start gap-3">
+                        <span class="text-gray-500 text-xs sm:text-sm">RERA</span>
+                        <span class="font-bold text-gray-900 text-xs sm:text-sm text-right">2100047656 (Coming Soon)</span>
+                    </div>
+                </div>
+
+                <!-- Configuration & Price Box -->
+                <div class="mx-4 sm:mx-5 mb-3 sm:mb-4 bg-luxury-dark border-2 border-dashed border-luxury-gold/70 rounded-lg p-3 sm:p-4 text-white text-xs sm:text-sm font-bold space-y-1">
+                    <p>3 BHK: 1,550&ndash;1,650 sq.ft</p>
+                    <p>4 BHK: 2,550&ndash;2,650 sq.ft</p>
+                    <p>Price: ₹3.10 &ndash; 5.12 Cr*</p>
+                </div>
+
+                <!-- Starting Price -->
+                <div class="px-4 sm:px-5 text-center pb-3 sm:pb-4">
+                    <p class="text-gray-600 text-xs sm:text-sm">Ultra-Luxury <span class="font-bold text-gray-900">3, 3.5 &amp; 4 BHK</span> Residences Start At</p>
+                    <p class="mt-1">
+                        <span class="text-2xl sm:text-4xl font-extrabold text-gray-900">₹ 3.10 Cr</span>
+                        <span class="text-gray-500 text-xs sm:text-sm"> Onwards*</span>
+                    </p>
+                </div>
+
+                <!-- Download Brochure CTA -->
+                <button onclick="openModal('Brochure Request', 'Download the complete illustrated catalog of the 70-acre master landscape.', 'Request Brochure')"
+                    class="w-full bg-luxury-dark hover:bg-black text-white py-3 sm:py-4 font-bold text-xs sm:text-sm tracking-wide transition-colors">
+                    Download Brochure
+                </button>
+            </div>
 
                     <!-- Prev / Next Arrows -->
                     <button id="prev-slide"
@@ -1110,101 +1134,73 @@
             </section>
 
             <!-- INTERACTIVE MASTER PLAN & UNIT LAYOUT PLANS -->
-            <section id="floor-plans" class="py-20 lg:py-28 bg-luxury-light">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center max-w-3xl mx-auto mb-12">
-                        <div class="text-xs uppercase tracking-widest text-luxury-gold font-bold mb-2">Detailed
-                            Blueprints</div>
-                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-luxury-dark">Layouts
-                            & Architectural Blueprints</h2>
-                        <div class="h-[1px] w-24 bg-luxury-gold mx-auto mt-4"></div>
-                    </div>
+    <section id="floor-plans" class="py-20 lg:py-28 bg-luxury-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <div class="text-xs uppercase tracking-widest text-luxury-gold font-bold mb-2">Detailed Blueprints</div>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-luxury-dark">Layouts & Architectural Blueprints</h2>
+                <div class="h-[1px] w-24 bg-luxury-gold mx-auto mt-4"></div>
+            </div>
 
-                    <!-- Interactive Tab Menu -->
-                    <div class="flex justify-center space-x-4 mb-10">
-                        <button onclick="switchPlanTab('master')" id="tab-btn-master"
-                            class="px-6 py-3 border-b-2 border-luxury-gold text-luxury-dark font-extrabold text-xs uppercase tracking-widest focus:outline-none transition-all duration-300">
-                            Master Plan Layout
-                        </button>
-                        <button onclick="switchPlanTab('unit')" id="tab-btn-unit"
-                            class="px-6 py-3 border-b-2 border-transparent text-gray-500 hover:text-luxury-dark font-bold text-xs uppercase tracking-widest focus:outline-none transition-all duration-300">
-                            Unit Plan Layout
-                        </button>
-                    </div>
+            <!-- Interactive Tab Menu -->
+            <div class="flex justify-center space-x-4 mb-10">
+                <button onclick="switchPlanTab('master')" id="tab-btn-master" class="px-6 py-3 border-b-2 border-luxury-gold text-luxury-dark font-extrabold text-xs uppercase tracking-widest focus:outline-none transition-all duration-300">
+                    Master Plan Layout
+                </button>
+                <button onclick="switchPlanTab('unit')" id="tab-btn-unit" class="px-6 py-3 border-b-2 border-transparent text-gray-500 hover:text-luxury-dark font-bold text-xs uppercase tracking-widest focus:outline-none transition-all duration-300">
+                    Unit Plan Layout
+                </button>
+            </div>
 
-                    <!-- Tab Content Container -->
-                    <div class="max-w-4xl mx-auto">
-                        <!-- Master Plan Window -->
-                        <div id="plan-master" class="block space-y-6">
-                            <div
-                                class="bg-luxury-card border border-luxury-gold/25 p-4 rounded-2xl shadow-xl relative group overflow-hidden">
-                                <!-- Blueprint Visual Mockup -->
-                                <div
-                                    class="aspect-[16/10] bg-luxury-dark/5 flex flex-col items-center justify-center border-2 border-dashed border-luxury-gold/30 rounded-xl relative overflow-hidden">
-                                    <div class="absolute inset-0 bg-cover bg-center opacity-60 filter blur-[2px]"
-                                        style="background-image: url('https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=1200&q=80')">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 bg-white/90 flex flex-col items-center justify-center p-6 text-center">
-                                        <i
-                                            class="fa-solid fa-map-location-dot text-luxury-gold text-5xl mb-4 animate-bounce"></i>
-                                        <h4 class="font-serif text-2xl text-gray-900 font-bold mb-2">Lodha Sadahalli
-                                            Complete Master Layout</h4>
-                                        <p class="text-xs text-gray-600 max-w-md leading-relaxed mb-6">Exposing
-                                            landscaped entry portals, internal boulevard systems, cascading lakeside
-                                            gazebos, and individual premium land block assignments.</p>
-                                        <button
-                                            onclick="openModal('Master Plan Request', 'Download full high-resolution SVG blueprint.', 'Unlock Full Master Plan')"
-                                            class="bg-luxury-gold text-luxury-dark font-extrabold px-6 py-3 rounded text-xs uppercase tracking-widest shimmer-btn">
-                                            Request Full Master Plan
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Unit Plan Window -->
-                        <div id="plan-unit" class="hidden space-y-6">
-                            <div
-                                class="bg-luxury-card border border-luxury-gold/25 p-4 rounded-2xl shadow-xl relative group overflow-hidden">
-                                <!-- Blueprint Visual Mockup -->
-                                <div
-                                    class="aspect-[16/10] bg-luxury-dark/5 flex flex-col items-center justify-center border-2 border-dashed border-luxury-gold/30 rounded-xl relative overflow-hidden">
-                                    <div class="absolute inset-0 bg-cover bg-center opacity-60 filter blur-[2px]"
-                                        style="background-image: url('https://images.unsplash.com/photo-1545464693-f1798a373343?auto=format&fit=crop&w=1200&q=80')">
-                                    </div>
-                                    <div
-                                        class="absolute inset-0 bg-white/90 flex flex-col items-center justify-center p-6 text-center">
-                                        <i
-                                            class="fa-solid fa-compass-drafting text-luxury-gold text-5xl mb-4 animate-bounce"></i>
-                                        <h4 class="font-serif text-2xl text-gray-900 font-bold mb-2">3 & 4 BHK Luxury
-                                            Unit Blueprints</h4>
-                                        <p class="text-xs text-gray-600 max-w-md leading-relaxed mb-6">Displaying room
-                                            layout, wall specifications, private deck areas, dual-ventilation designs,
-                                            and dedicated servant quarters mapping.</p>
-                                        <button
-                                            onclick="openModal('Unit Plan Request', 'Download precise architect drawings with exact dimensions for 3, 3.5 & 4 BHK models.', 'Unlock Unit Plans')"
-                                            class="bg-luxury-gold text-luxury-dark font-extrabold px-6 py-3 rounded text-xs uppercase tracking-widest shimmer-btn">
-                                            Request Unit Blueprint Pack
-                                        </button>
-                                    </div>
-                                </div>
+            <!-- Tab Content Container -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Master Plan Window -->
+                <div id="plan-master" class="block space-y-6">
+                    <div class="bg-luxury-card border border-luxury-gold/25 p-4 rounded-2xl shadow-xl relative group overflow-hidden">
+                        <!-- Blueprint Visual Mockup -->
+                        <div class="aspect-[16/10] bg-luxury-dark/5 flex flex-col items-center justify-center border-2 border-dashed border-luxury-gold/30 rounded-xl relative overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center filter blur-sm" style="background-image: url('floorplan.png')"></div>
+                            <div class="absolute inset-0 bg-white/35 flex flex-col items-center justify-center p-6 text-center">
+                                <i class="fa-solid fa-map-location-dot text-luxury-gold text-5xl mb-4 animate-bounce"></i>
+                                <h4 class="font-serif text-2xl text-gray-900 font-bold mb-2">Lodha Sadahalli Complete Master Layout</h4>
+                                <p class="text-xs text-gray-600 max-w-md leading-relaxed mb-6">Exposing landscaped entry portals, internal boulevard systems, cascading lakeside gazebos, and individual premium land block assignments.</p>
+                                <button onclick="openModal('Master Plan Request', 'Download full high-resolution SVG blueprint.', 'Unlock Full Master Plan')" class="bg-luxury-gold text-luxury-dark font-extrabold px-6 py-3 rounded text-xs uppercase tracking-widest shimmer-btn">
+                                    Request Full Master Plan
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+
+                <!-- Unit Plan Window -->
+                <div id="plan-unit" class="hidden space-y-6">
+                    <div class="bg-luxury-card border border-luxury-gold/25 p-4 rounded-2xl shadow-xl relative group overflow-hidden">
+                        <!-- Blueprint Visual Mockup -->
+                        <div class="aspect-[16/10] bg-luxury-dark/5 flex flex-col items-center justify-center border-2 border-dashed border-luxury-gold/30 rounded-xl relative overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center filter blur-sm" style="background-image: url('floorplan.png')"></div>
+                            <div class="absolute inset-0 bg-white/35 flex flex-col items-center justify-center p-6 text-center">
+                                <i class="fa-solid fa-compass-drafting text-luxury-gold text-5xl mb-4 animate-bounce"></i>
+                                <h4 class="font-serif text-2xl text-gray-900 font-bold mb-2">3 & 4 BHK Luxury Unit Blueprints</h4>
+                                <p class="text-xs text-gray-600 max-w-md leading-relaxed mb-6">Displaying room layout, wall specifications, private deck areas, dual-ventilation designs, and dedicated servant quarters mapping.</p>
+                                <button onclick="openModal('Unit Plan Request', 'Download precise architect drawings with exact dimensions for 3, 3.5 & 4 BHK models.', 'Unlock Unit Plans')" class="bg-luxury-gold text-luxury-dark font-extrabold px-6 py-3 rounded text-xs uppercase tracking-widest shimmer-btn">
+                                    Request Unit Blueprint Pack
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
             <!-- PREMIUM AMENITIES -->
             <section id="amenities" class="py-20 lg:py-28 bg-white text-gray-900 relative">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center max-w-3xl mx-auto mb-16">
-                        <div class="text-xs uppercase tracking-widest text-luxury-gold font-bold mb-2">Bespoke
-                            Conveniences</div>
-                        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Clubhouse &
-                            Estate Amenities</h2>
-                        <div class="h-[1px] w-24 bg-luxury-gold mx-auto mt-4"></div>
-                    </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="text-xs uppercase tracking-widest text-luxury-gold font-bold mb-2">Bespoke Conveniences</div>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Clubhouse & Estate Amenities</h2>
+                <div class="h-[1px] w-24 bg-luxury-gold mx-auto mt-4"></div>
+            </div>
 
                     <!-- Grid of Premium Amenities -->
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">

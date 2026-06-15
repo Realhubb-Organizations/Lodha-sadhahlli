@@ -424,27 +424,12 @@
 
         /* Launch banner sizing and inner scroll area */
         .launch-banner {
-            width: 440px;
-            height: calc(100vh - 64px);
+            width: 380px;
+            max-width: calc(100% - 3rem);
         }
 
         .launch-banner .content {
-            max-height: calc(100vh - 128px);
-            overflow-y: auto;
-            padding-right: 8px;
-        }
-
-        .launch-banner .content::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .launch-banner .content::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .launch-banner .content::-webkit-scrollbar-thumb {
-            background: rgba(0, 0, 0, 0.12);
-            border-radius: 4px;
+            padding-right: 0;
         }
     </style>
     <script id="seo-canonical-helper">
@@ -571,7 +556,7 @@
         <div class="flex-1 min-w-0">
 
             <!-- HERO SECTION -->
-            <section id="home" class="relative overflow-hidden" style="height: calc(100vh - 72px);">
+            <section id="home" class="relative overflow-hidden" style="height: calc(100vh - 72px); min-height: 580px;">
 
                 <!-- Full-width Image Slider -->
                 <div class="relative w-full h-full overflow-hidden"
@@ -589,27 +574,27 @@
                             title="Lodha Sadahalli – 3, 3.5 & 4 BHK Ultra-Luxury Homes"></div>
 
                     <!-- Floating Launch Banner (top-left) -->
-                    <div class="absolute top-8 left-6 z-10 launch-banner overflow-hidden rounded-xl shadow-2xl">
-                        <div class="rounded-t-xl bg-black text-white px-4 py-3 text-sm font-semibold">Pre-Launch:
+                    <div class="absolute top-4 sm:top-8 left-4 sm:left-6 z-10 launch-banner overflow-hidden rounded-xl shadow-2xl">
+                        <div class="rounded-t-xl bg-black text-white px-4 py-2.5 text-sm font-semibold">Pre-Launch:
                             Register Your Interest</div>
 
-                        <div class="bg-white px-5 pt-5 pb-4 content">
-                            <h1 class="font-serif text-2xl text-gray-900 font-extrabold">Lodha Sadahalli | Luxury 3, 3.5
+                        <div class="bg-white px-3.5 sm:px-5 pt-3 sm:pt-5 pb-3 sm:pb-4 content">
+                            <h1 class="font-serif text-lg sm:text-2xl text-gray-900 font-extrabold">Lodha Sadahalli | Luxury 3, 3.5
                                 & 4 BHK in Devanahalli, Bengaluru</h1>
-                            <p class="text-gray-500 text-xs mt-1">Sadahalli, Devanahalli, North Bengaluru <span
+                            <p class="text-gray-500 text-[11px] sm:text-xs mt-0.5 sm:mt-1">Sadahalli, Devanahalli, North Bengaluru <span
                                     class="font-semibold">By Lodha Group</span></p>
 
-                            <div class="mt-4 rounded-lg bg-[#F0EDE6] p-3 text-[12px] text-gray-700">
-                                <div class="flex justify-between mb-2"><span class="text-gray-500">EOI
+                            <div class="mt-2.5 sm:mt-4 rounded-lg bg-[#F0EDE6] p-2.5 sm:p-3 text-[11px] sm:text-[12px] text-gray-700">
+                                <div class="flex justify-between mb-1.5 sm:mb-2"><span class="text-gray-500">EOI
                                         Amount</span><span class="font-bold">₹7.20 Lacs*</span></div>
-                                <div class="flex justify-between mb-2"><span class="text-gray-500">Land
+                                <div class="flex justify-between mb-1.5 sm:mb-2"><span class="text-gray-500">Land
                                         Parcel</span><span class="font-bold">Approx 70 Acres</span></div>
-                                <div class="flex justify-between mb-2"><span class="text-gray-500">Structure</span><span
+                                <div class="flex justify-between mb-1.5 sm:mb-2"><span class="text-gray-500">Structure</span><span
                                         class="font-bold">Multiple Towers</span></div>
-                                <div class="flex justify-between mb-2"><span
+                                <div class="flex justify-between mb-1.5 sm:mb-2"><span
                                         class="text-gray-500">Residences</span><span class="font-bold">Coming
                                         Soon</span></div>
-                                <div class="flex justify-between mb-2"><span
+                                <div class="flex justify-between mb-1.5 sm:mb-2"><span
                                         class="text-gray-500">Possession</span><span class="font-bold">To Be
                                         Announced</span></div>
                                 <div class="flex justify-between"><span class="text-gray-500">RERA</span><span
@@ -617,23 +602,23 @@
                             </div>
 
                             <div
-                                class="mt-4 p-3 bg-black text-white rounded-lg border-4 border-dashed border-yellow-400">
-                                <p class="text-sm font-semibold">3 BHK: 1,550–1,650 sq.ft<br>4 BHK: 2,550–2,650 sq.ft<br
+                                class="mt-2.5 sm:mt-4 p-2.5 sm:p-3 bg-black text-white rounded-lg border-4 border-dashed border-yellow-400">
+                                <p class="text-xs sm:text-sm font-semibold">3 BHK: 1,550–1,650 sq.ft<br>4 BHK: 2,550–2,650 sq.ft<br
                                         class="hidden sm:block">Price: ₹3.10 – 5.12 Cr*</p>
                             </div>
 
-                            <div class="mt-4 text-center">
-                                <p class="text-sm text-gray-500">Ultra-Luxury <span class="font-semibold">3, 3.5 &amp; 4
+                            <div class="mt-2.5 sm:mt-4 text-center">
+                                <p class="text-xs sm:text-sm text-gray-500">Ultra-Luxury <span class="font-semibold">3, 3.5 &amp; 4
                                         BHK</span> Residences Start At</p>
-                                <p class="mt-2 text-3xl sm:text-4xl font-extrabold text-gray-900">₹3.10 Cr <span
-                                        class="text-sm text-gray-500 font-medium">Onwards*</span></p>
+                                <p class="mt-1 sm:mt-2 text-2xl sm:text-4xl font-extrabold text-gray-900">₹3.10 Cr <span
+                                        class="text-xs sm:text-sm text-gray-500 font-medium">Onwards*</span></p>
                             </div>
                         </div>
 
-                        <div class="bg-black text-white text-center py-3 font-semibold rounded-b-xl">
+                        <div class="bg-black text-white text-center py-2.5 sm:py-3 font-semibold rounded-b-xl">
                             <button
                                 onclick="openModal('Download Brochure', 'Please enter details to download brochure.', 'Download')"
-                                class="w-full">Download Brochure</button>
+                                class="w-full text-xs sm:text-sm">Download Brochure</button>
                         </div>
                     </div>
 

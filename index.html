@@ -426,10 +426,21 @@
         .launch-banner {
             width: 380px;
             max-width: calc(100% - 3rem);
+            height: auto !important;
+            max-height: none !important;
+            overflow: visible !important;
         }
 
         .launch-banner .content {
             padding-right: 0;
+            max-height: none !important;
+            overflow: visible !important;
+        }
+
+        #hero-info-card {
+            height: auto !important;
+            max-height: none !important;
+            overflow: visible !important;
         }
     </style>
     <script id="seo-canonical-helper">
@@ -574,7 +585,7 @@
                             title="Lodha Sadahalli – 3, 3.5 & 4 BHK Ultra-Luxury Homes"></div>
 
                     <!-- Floating Info Card (top-left) -->
-                    <div
+                    <div id="hero-info-card"
                         class="absolute top-4 sm:top-8 left-6 right-6 sm:right-auto z-20 sm:w-96 bg-white shadow-2xl overflow-hidden rounded-xl">
                         <!-- Top Bar -->
                         <div class="bg-luxury-dark text-white py-2 px-4 sm:px-5">

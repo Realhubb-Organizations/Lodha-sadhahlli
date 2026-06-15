@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lodha-sadahalli.newlodhaproperties.in/sitemap.xml
+Sitemap: https://lodha-sadahahlli.newlodhaproperties.in/sitemap.xml

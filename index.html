@@ -424,27 +424,12 @@
 
         /* Launch banner sizing and inner scroll area */
         .launch-banner {
-            width: 440px;
-            height: calc(100vh - 64px);
+            width: 380px;
+            max-width: calc(100% - 3rem);
         }
 
         .launch-banner .content {
-            max-height: calc(100vh - 128px);
-            overflow-y: auto;
-            padding-right: 8px;
-        }
-
-        .launch-banner .content::-webkit-scrollbar {
-            width: 6px;
-        }
-
-        .launch-banner .content::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .launch-banner .content::-webkit-scrollbar-thumb {
-            background: rgba(0, 0, 0, 0.12);
-            border-radius: 4px;
+            padding-right: 0;
         }
     </style>
     <script id="seo-canonical-helper">
